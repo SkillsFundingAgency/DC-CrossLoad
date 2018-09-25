@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -22,9 +22,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ESFA.DC.CrossLoad.Dto\ESFA.DC.CrossLoad.Dto.csproj" />
-    <ProjectReference Include="..\ESFA.DC.CrossLoad.Interface\ESFA.DC.CrossLoad.Interface.csproj" />
-    <ProjectReference Include="..\ESFA.DC.CrossLoad.Message\ESFA.DC.CrossLoad.Message.csproj" />
+    <ProjectReference Include="..\ESFA.DC.CrossLoad.Dto\ESFA.DC.CrossLoad.Dto.csproj" >
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.CrossLoad.Interface\ESFA.DC.CrossLoad.Interface.csproj" >
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.CrossLoad.Message\ESFA.DC.CrossLoad.Message.csproj" >
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
