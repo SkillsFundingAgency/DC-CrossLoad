@@ -2,7 +2,7 @@
 using ESFA.DC.CrossLoad.Interface;
 using ESFA.DC.CrossLoad.Message;
 
-namespace ESFA.DC.CrossLoad.Mapper
+namespace ESFA.DC.CrossLoad
 {
     public sealed class CrossLoadMessageMapper : ICrossLoadMessageMapper
     {
