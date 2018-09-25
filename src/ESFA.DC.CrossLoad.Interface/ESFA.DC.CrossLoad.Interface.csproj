@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ESFA.DC.CrossLoad.Dto\ESFA.DC.CrossLoad.Dto.csproj" />
+    <ProjectReference Include="..\ESFA.DC.CrossLoad.Dto\ESFA.DC.CrossLoad.Dto.csproj" />
     <ProjectReference Include="..\ESFA.DC.CrossLoad.Message\ESFA.DC.CrossLoad.Message.csproj" />
   </ItemGroup>
 
