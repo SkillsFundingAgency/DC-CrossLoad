@@ -8,7 +8,7 @@ namespace ESFA.DC.CrossLoad.Mapper
     {
         public MessageCrossLoadDcftToDct FromDto(MessageCrossLoadDcftToDctDto dto)
         {
-            return new MessageCrossLoadDcftToDct(dto.JobId, dto.StorageContainerName, dto.StorageFileName);
+            return new MessageCrossLoadDcftToDct(dto.JobId, dto.StorageContainerName, dto.StorageFileName, dto.ErrorMessage);
         }
 
         public MessageCrossLoadDctToDcft FromDto(MessageCrossLoadDctToDcftDto dto)
@@ -19,7 +19,9 @@ namespace ESFA.DC.CrossLoad.Mapper
                 dto.StorageContainerName,
                 dto.StorageFileName,
                 (CrossLoadJobType)dto.JobType,
-                dto.Username);
+                dto.Username,
+                dto.StorageContainerNameReport,
+                dto.StorageFileNameReport);
         }
 
         public MessageCrossLoadDcftToDctDto FromMessage(MessageCrossLoadDcftToDct dto)
@@ -28,7 +30,8 @@ namespace ESFA.DC.CrossLoad.Mapper
             {
                 JobId = dto.JobId,
                 StorageFileName = dto.StorageFileName,
-                StorageContainerName = dto.StorageContainerName
+                StorageContainerName = dto.StorageContainerName,
+                ErrorMessage = dto.ErrorMessage
             };
         }
 
@@ -41,7 +44,9 @@ namespace ESFA.DC.CrossLoad.Mapper
                 StorageContainerName = dto.StorageContainerName,
                 JobType = (byte)dto.JobType,
                 UkPrn = dto.UkPrn,
-                Username = dto.Username
+                Username = dto.Username,
+                StorageContainerNameReport = dto.StorageContainerNameReport,
+                StorageFileNameReport = dto.StorageFileNameReport
             };
         }
     }
