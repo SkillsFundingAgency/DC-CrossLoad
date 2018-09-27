@@ -33,7 +33,7 @@ namespace ESFA.DC.CrossLoad.Dto
         /// <summary>
         /// The UkPrn of the user.
         /// </summary>
-        public string UkPrn { get; set; }
+        public long UkPrn { get; set; }
 
         /// <summary>
         /// The job type of this job (see CrossLoadJobType enum).
@@ -44,5 +44,10 @@ namespace ESFA.DC.CrossLoad.Dto
         /// The username of the user who created the job.
         /// </summary>
         public string Username { get; set; }
+
+        /// <summary>
+        /// The upin of the user.
+        /// </summary>
+        public long Upin { get; set; }
     }
 }

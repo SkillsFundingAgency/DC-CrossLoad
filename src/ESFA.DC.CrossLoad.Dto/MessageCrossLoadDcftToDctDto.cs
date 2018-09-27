@@ -24,5 +24,10 @@ namespace ESFA.DC.CrossLoad.Dto
         /// The file name of the report zip file.
         /// </summary>
         public string StorageFileName { get; set; }
+
+        /// <summary>
+        /// dcft system job id for referebce
+        /// </summary>
+        public string DcftJobId { get; set; }
     }
 }
