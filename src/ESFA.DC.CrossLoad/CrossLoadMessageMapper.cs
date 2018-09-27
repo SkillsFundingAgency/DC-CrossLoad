@@ -31,7 +31,8 @@ namespace ESFA.DC.CrossLoad
                 JobId = dto.JobId,
                 StorageFileName = dto.StorageFileName,
                 StorageContainerName = dto.StorageContainerName,
-                ErrorMessage = dto.ErrorMessage
+                ErrorMessage = dto.ErrorMessage,
+                DcftJobId = dto.DcftJobId
             };
         }
 
@@ -46,7 +47,8 @@ namespace ESFA.DC.CrossLoad
                 UkPrn = dto.UkPrn,
                 Username = dto.Username,
                 StorageContainerNameReport = dto.StorageContainerNameReport,
-                StorageFileNameReport = dto.StorageFileNameReport
+                StorageFileNameReport = dto.StorageFileNameReport,
+                Upin = dto.Upin
             };
         }
     }

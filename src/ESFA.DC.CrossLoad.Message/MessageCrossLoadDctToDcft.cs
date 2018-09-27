@@ -4,7 +4,8 @@
     {
         public MessageCrossLoadDctToDcft(
             long jobId,
-            string ukPrn,
+            long ukprn,
+            long upin,
             string storageContainerName,
             string storageFileName,
             CrossLoadJobType jobType,
@@ -13,14 +14,17 @@
             string storageFileNameReport)
             : base(jobId, storageContainerName, storageFileName)
         {
-            UkPrn = ukPrn;
+            UkPrn = ukprn;
+            Upin = upin;
             JobType = jobType;
             Username = username;
             StorageContainerNameReport = storageContainerNameReport;
             StorageFileNameReport = storageFileNameReport;
         }
 
-        public string UkPrn { get; private set; }
+        public long UkPrn { get; private set; }
+
+        public long Upin { get; private set; }
 
         public CrossLoadJobType JobType { get; private set; }
 
