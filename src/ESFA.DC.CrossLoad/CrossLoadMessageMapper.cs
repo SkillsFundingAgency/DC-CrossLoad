@@ -8,7 +8,7 @@ namespace ESFA.DC.CrossLoad
     {
         public MessageCrossLoadDcftToDct FromDto(MessageCrossLoadDcftToDctDto dto)
         {
-            return new MessageCrossLoadDcftToDct(dto.JobId, dto.StorageContainerName, dto.StorageFileName, dto.ErrorMessage);
+            return new MessageCrossLoadDcftToDct(dto.JobId, dto.DcftJobId, dto.StorageContainerName, dto.StorageFileName, dto.ErrorMessage);
         }
 
         public MessageCrossLoadDctToDcft FromDto(MessageCrossLoadDctToDcftDto dto)
@@ -16,6 +16,7 @@ namespace ESFA.DC.CrossLoad
             return new MessageCrossLoadDctToDcft(
                 dto.JobId,
                 dto.UkPrn,
+                dto.Upin,
                 dto.StorageContainerName,
                 dto.StorageFileName,
                 (CrossLoadJobType)dto.JobType,
