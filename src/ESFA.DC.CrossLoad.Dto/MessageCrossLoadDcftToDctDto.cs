@@ -21,12 +21,17 @@ namespace ESFA.DC.CrossLoad.Dto
         public string StorageContainerName { get; set; }
 
         /// <summary>
-        /// The file name of the report zip file.
+        /// The file name of the report zip file 1.
         /// </summary>
-        public string StorageFileName { get; set; }
+        public string StorageFileNameReport1 { get; set; }
 
         /// <summary>
-        /// dcft system job id for referebce
+        /// The file name of the report zip file 2.
+        /// </summary>
+        public string StorageFileNameReport2 { get; set; }
+
+        /// <summary>
+        /// dcft system job id for reference
         /// </summary>
         public string DcftJobId { get; set; }
     }

@@ -8,7 +8,7 @@ namespace ESFA.DC.CrossLoad
     {
         public MessageCrossLoadDcftToDct FromDto(MessageCrossLoadDcftToDctDto dto)
         {
-            return new MessageCrossLoadDcftToDct(dto.JobId, dto.DcftJobId, dto.StorageContainerName, dto.StorageFileName, dto.ErrorMessage);
+            return new MessageCrossLoadDcftToDct(dto.JobId, dto.DcftJobId, dto.StorageContainerName, dto.StorageFileNameReport1, dto.StorageFileNameReport2, dto.ErrorMessage);
         }
 
         public MessageCrossLoadDctToDcft FromDto(MessageCrossLoadDctToDcftDto dto)
@@ -21,8 +21,8 @@ namespace ESFA.DC.CrossLoad
                 dto.StorageFileName,
                 (CrossLoadJobType)dto.JobType,
                 dto.Username,
-                dto.StorageContainerNameReport,
-                dto.StorageFileNameReport);
+                dto.StorageFileNameReport1,
+                dto.StorageFileNameReport2);
         }
 
         public MessageCrossLoadDcftToDctDto FromMessage(MessageCrossLoadDcftToDct dto)
@@ -30,10 +30,11 @@ namespace ESFA.DC.CrossLoad
             return new MessageCrossLoadDcftToDctDto
             {
                 JobId = dto.JobId,
-                StorageFileName = dto.StorageFileName,
                 StorageContainerName = dto.StorageContainerName,
                 ErrorMessage = dto.ErrorMessage,
-                DcftJobId = dto.DcftJobId
+                DcftJobId = dto.DcftJobId,
+                StorageFileNameReport1 = dto.StorageFileNameReport1,
+                StorageFileNameReport2 = dto.StorageFileNameReport2
             };
         }
 
@@ -47,8 +48,8 @@ namespace ESFA.DC.CrossLoad
                 JobType = (byte)dto.JobType,
                 UkPrn = dto.UkPrn,
                 Username = dto.Username,
-                StorageContainerNameReport = dto.StorageContainerNameReport,
-                StorageFileNameReport = dto.StorageFileNameReport,
+                StorageFileNameReport1 = dto.StorageFileNameReport1,
+                StorageFileNameReport2 = dto.StorageFileNameReport2,
                 Upin = dto.Upin
             };
         }

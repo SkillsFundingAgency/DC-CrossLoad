@@ -11,7 +11,7 @@ namespace ESFA.DC.CrossLoad.Dto
         public long JobId { get; set; }
 
         /// <summary>
-        /// The storage container where the input file is stored.
+        /// The storage container where the input file is stored and report saved to.
         /// </summary>
         public string StorageContainerName { get; set; }
 
@@ -21,14 +21,14 @@ namespace ESFA.DC.CrossLoad.Dto
         public string StorageFileName { get; set; }
 
         /// <summary>
-        /// The requested storage container where the report zip file is stored.
+        /// The requested file name of the report zip file 1.
         /// </summary>
-        public string StorageContainerNameReport { get; set; }
+        public string StorageFileNameReport1 { get; set; }
 
         /// <summary>
-        /// The requested file name of the report zip file.
+        /// The requested file name of the report zip file 1.
         /// </summary>
-        public string StorageFileNameReport { get; set; }
+        public string StorageFileNameReport2 { get; set; }
 
         /// <summary>
         /// The UkPrn of the user.

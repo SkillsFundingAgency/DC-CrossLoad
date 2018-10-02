@@ -10,16 +10,17 @@
             string storageFileName,
             CrossLoadJobType jobType,
             string username,
-            string storageContainerNameReport,
-            string storageFileNameReport)
-            : base(jobId, storageContainerName, storageFileName)
+            string storageFileNameReport1,
+            string storageFileNameReport2)
+            : base(jobId, storageContainerName)
         {
             UkPrn = ukprn;
             Upin = upin;
+            StorageFileName = storageFileName;
             JobType = jobType;
             Username = username;
-            StorageContainerNameReport = storageContainerNameReport;
-            StorageFileNameReport = storageFileNameReport;
+            StorageFileNameReport1 = storageFileNameReport1;
+            StorageFileNameReport2 = storageFileNameReport2;
         }
 
         public long UkPrn { get; private set; }
@@ -30,8 +31,10 @@
 
         public string Username { get; private set; }
 
-        public string StorageContainerNameReport { get; private set; }
+        public string StorageFileName { get; private set; }
 
-        public string StorageFileNameReport { get; private set; }
+        public string StorageFileNameReport1 { get; private set; }
+
+        public string StorageFileNameReport2 { get; private set; }
     }
 }
